@@ -1,0 +1,344 @@
+(0.000) QUERY = "\n            SELECT name FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+(0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+(0.000) QUERY = u'SELECT (1) AS "a" FROM "authentication_account" WHERE "authentication_account"."email" = %s LIMIT 1' - PARAMS = (u'boy@n6a.com',); args=(u'boy@n6a.com',)
+(0.000) QUERY = u'SELECT (1) AS "a" FROM "authentication_account" WHERE "authentication_account"."username" = %s LIMIT 1' - PARAMS = (u'boy1',); args=(u'boy1',)
+Internal Server Error: /api/v1/accounts/
+Traceback (most recent call last):
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/rest_framework/viewsets.py", line 79, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/rest_framework/views.py", line 406, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/rest_framework/views.py", line 403, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/graphael/thinkster-django-angular-boilerplate/authentication/views.py", line 29, in create
+    return Response({
+NameError: global name 'Response' is not defined
+Internal Server Error: /api/v1/accounts/
+Traceback (most recent call last):
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/rest_framework/viewsets.py", line 79, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/rest_framework/views.py", line 406, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/rest_framework/views.py", line 403, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/graphael/thinkster-django-angular-boilerplate/authentication/views.py", line 29, in create
+    return Response({
+NameError: global name 'Response' is not defined
+(0.000) QUERY = "\n            SELECT name FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+(0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+(0.000) QUERY = u'SELECT (1) AS "a" FROM "authentication_account" WHERE "authentication_account"."email" = %s LIMIT 1' - PARAMS = (u'hello@boy.com',); args=(u'hello@boy.com',)
+(0.000) QUERY = u'SELECT (1) AS "a" FROM "authentication_account" WHERE "authentication_account"."username" = %s LIMIT 1' - PARAMS = (u'hello',); args=(u'hello',)
+(0.000) QUERY = u'BEGIN' - PARAMS = (); args=None
+(0.001) QUERY = u'INSERT INTO "authentication_account" ("password", "last_login", "email", "username", "first_name", "last_name", "tagline", "is_admin", "created_at", "updated_at") VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)' - PARAMS = (u'pbkdf2_sha256$12000$4U90roJLnOaB$1QWTfzt3uONcFoJxbozkeWtg4J7as95ea3KU8bbeRAw=', u'2017-09-12 18:51:11.780153', u'hello@boy.com', u'hello', u'', u'', u'', False, u'2017-09-12 18:51:11.841184', u'2017-09-12 18:51:11.841206'); args=[u'pbkdf2_sha256$12000$4U90roJLnOaB$1QWTfzt3uONcFoJxbozkeWtg4J7as95ea3KU8bbeRAw=', u'2017-09-12 18:51:11.780153', u'hello@boy.com', u'hello', u'', u'', u'', False, u'2017-09-12 18:51:11.841184', u'2017-09-12 18:51:11.841206']
+Internal Server Error: /api/v1/accounts/
+Traceback (most recent call last):
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/rest_framework/viewsets.py", line 79, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/rest_framework/views.py", line 406, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/rest_framework/views.py", line 403, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/graphael/thinkster-django-angular-boilerplate/authentication/views.py", line 27, in create
+    return Response(serializer.validated_data, status=status.HTTP_201_CREATED)
+NameError: global name 'Response' is not defined
+(0.000) QUERY = "\n            SELECT name FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+(0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+(0.000) QUERY = u'SELECT (1) AS "a" FROM "authentication_account" WHERE "authentication_account"."email" = %s LIMIT 1' - PARAMS = (u'hello@boy.com',); args=(u'hello@boy.com',)
+(0.000) QUERY = u'SELECT (1) AS "a" FROM "authentication_account" WHERE "authentication_account"."username" = %s LIMIT 1' - PARAMS = (u'hello',); args=(u'hello',)
+Internal Server Error: /api/v1/accounts/
+Traceback (most recent call last):
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/rest_framework/viewsets.py", line 79, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/rest_framework/views.py", line 406, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/rest_framework/views.py", line 403, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/graphael/thinkster-django-angular-boilerplate/authentication/views.py", line 31, in create
+    return Response({
+NameError: global name 'Response' is not defined
+Internal Server Error: /api/v1/accounts/
+Traceback (most recent call last):
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/rest_framework/viewsets.py", line 79, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/rest_framework/views.py", line 403, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/rest_framework/views.py", line 403, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/graphael/thinkster-django-angular-boilerplate/authentication/views.py", line 26, in create
+    if serializer.is_valid():
+  File "/Users/graphael/thinkster-django-angular-boilerplate/authentication/views.py", line 26, in create
+    if serializer.is_valid():
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/bdb.py", line 49, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/bdb.py", line 68, in dispatch_line
+    if self.quitting: raise BdbQuit
+BdbQuit
+(0.000) QUERY = "\n            SELECT name FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+(0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+(0.000) QUERY = u'SELECT (1) AS "a" FROM "authentication_account" WHERE "authentication_account"."email" = %s LIMIT 1' - PARAMS = (u'hello@boy.com',); args=(u'hello@boy.com',)
+(0.000) QUERY = u'SELECT (1) AS "a" FROM "authentication_account" WHERE "authentication_account"."username" = %s LIMIT 1' - PARAMS = (u'hello',); args=(u'hello',)
+Internal Server Error: /api/v1/accounts/
+Traceback (most recent call last):
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/rest_framework/viewsets.py", line 79, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/rest_framework/views.py", line 403, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/rest_framework/views.py", line 403, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/graphael/thinkster-django-angular-boilerplate/authentication/views.py", line 26, in create
+    if serializer.is_valid():
+  File "/Users/graphael/thinkster-django-angular-boilerplate/authentication/views.py", line 26, in create
+    if serializer.is_valid():
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/bdb.py", line 49, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/bdb.py", line 68, in dispatch_line
+    if self.quitting: raise BdbQuit
+BdbQuit
+Internal Server Error: /api/v1/accounts/
+Traceback (most recent call last):
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/rest_framework/viewsets.py", line 79, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/rest_framework/views.py", line 403, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/rest_framework/views.py", line 403, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/graphael/thinkster-django-angular-boilerplate/authentication/views.py", line 26, in create
+    
+  File "/Users/graphael/thinkster-django-angular-boilerplate/authentication/views.py", line 26, in create
+    
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/bdb.py", line 49, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/bdb.py", line 68, in dispatch_line
+    if self.quitting: raise BdbQuit
+BdbQuit
+Internal Server Error: /api/v1/accounts/
+Traceback (most recent call last):
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/rest_framework/viewsets.py", line 79, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/rest_framework/views.py", line 403, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/rest_framework/views.py", line 403, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/graphael/thinkster-django-angular-boilerplate/authentication/views.py", line 26, in create
+    
+  File "/Users/graphael/thinkster-django-angular-boilerplate/authentication/views.py", line 26, in create
+    
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/bdb.py", line 49, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/bdb.py", line 68, in dispatch_line
+    if self.quitting: raise BdbQuit
+BdbQuit
+(0.000) QUERY = "\n            SELECT name FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+(0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+(0.001) QUERY = u'SELECT "authentication_account"."id", "authentication_account"."password", "authentication_account"."last_login", "authentication_account"."email", "authentication_account"."username", "authentication_account"."first_name", "authentication_account"."last_name", "authentication_account"."tagline", "authentication_account"."is_admin", "authentication_account"."created_at", "authentication_account"."updated_at" FROM "authentication_account" ORDER BY "authentication_account"."created_at" DESC LIMIT 1' - PARAMS = (); args=()
+(0.000) QUERY = u'SELECT "authentication_account"."id", "authentication_account"."password", "authentication_account"."last_login", "authentication_account"."email", "authentication_account"."username", "authentication_account"."first_name", "authentication_account"."last_name", "authentication_account"."tagline", "authentication_account"."is_admin", "authentication_account"."created_at", "authentication_account"."updated_at" FROM "authentication_account" LIMIT 21' - PARAMS = (); args=()
+(0.000) QUERY = "\n            SELECT name FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+(0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+(0.000) QUERY = u'SELECT (1) AS "a" FROM "authentication_account" WHERE "authentication_account"."email" = %s LIMIT 1' - PARAMS = (u'beluga@man.com',); args=(u'beluga@man.com',)
+(0.000) QUERY = u'SELECT (1) AS "a" FROM "authentication_account" WHERE "authentication_account"."username" = %s LIMIT 1' - PARAMS = (u'beluga',); args=(u'beluga',)
+(0.000) QUERY = u'BEGIN' - PARAMS = (); args=None
+(0.001) QUERY = u'INSERT INTO "authentication_account" ("password", "last_login", "email", "username", "first_name", "last_name", "tagline", "is_admin", "created_at", "updated_at") VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)' - PARAMS = (u'pbkdf2_sha256$12000$Arqi7OL962fx$Y3WIu8Pv+VJeJkodJ53GT+R975oAZCl4OCMS09y3b4I=', u'2017-09-12 20:02:51.869634', u'beluga@man.com', u'beluga', u'', u'', u'', False, u'2017-09-12 20:02:51.932103', u'2017-09-12 20:02:51.932135'); args=[u'pbkdf2_sha256$12000$Arqi7OL962fx$Y3WIu8Pv+VJeJkodJ53GT+R975oAZCl4OCMS09y3b4I=', u'2017-09-12 20:02:51.869634', u'beluga@man.com', u'beluga', u'', u'', u'', False, u'2017-09-12 20:02:51.932103', u'2017-09-12 20:02:51.932135']
+Internal Server Error: /api/v1/accounts/
+Traceback (most recent call last):
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/rest_framework/viewsets.py", line 79, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/rest_framework/views.py", line 406, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/rest_framework/views.py", line 403, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/graphael/thinkster-django-angular-boilerplate/authentication/views.py", line 27, in create
+    return request.Response(serializer.validated_data, status=status.HTTP_201_CREATED)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/rest_framework/request.py", line 487, in __getattr__
+    return getattr(self._request, attr)
+AttributeError: 'WSGIRequest' object has no attribute 'Response'
+(0.000) QUERY = "\n            SELECT name FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+(0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+Internal Server Error: /api/v1/accounts/
+Traceback (most recent call last):
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/handlers/base.py", line 98, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/graphael/thinkster-django-angular-boilerplate/thinkster_django_angular_boilerplate/urls.py", line 7, in <module>
+    from authentication.views import AccountViewSet
+  File "/Users/graphael/thinkster-django-angular-boilerplate/authentication/views.py", line 29
+    else
+       ^
+SyntaxError: invalid syntax
+Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/handlers/base.py", line 87, in get_response
+    response = middleware_method(request)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/middleware/common.py", line 72, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 619, in is_valid_path
+    resolve(path, urlconf)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 494, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/graphael/thinkster-django-angular-boilerplate/thinkster_django_angular_boilerplate/urls.py", line 7, in <module>
+    from authentication.views import AccountViewSet
+  File "/Users/graphael/thinkster-django-angular-boilerplate/authentication/views.py", line 29
+    else
+       ^
+SyntaxError: invalid syntax
+Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/handlers/base.py", line 87, in get_response
+    response = middleware_method(request)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/middleware/common.py", line 72, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 619, in is_valid_path
+    resolve(path, urlconf)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 494, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/graphael/thinkster-django-angular-boilerplate/thinkster_django_angular_boilerplate/urls.py", line 7, in <module>
+    from authentication.views import AccountViewSet
+  File "/Users/graphael/thinkster-django-angular-boilerplate/authentication/views.py", line 29
+    else
+       ^
+SyntaxError: invalid syntax
+Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/handlers/base.py", line 87, in get_response
+    response = middleware_method(request)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/middleware/common.py", line 72, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 619, in is_valid_path
+    resolve(path, urlconf)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 494, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/graphael/thinkster-django-angular-boilerplate/thinkster_django_angular_boilerplate/urls.py", line 7, in <module>
+    from authentication.views import AccountViewSet
+  File "/Users/graphael/thinkster-django-angular-boilerplate/authentication/views.py", line 29
+    else
+       ^
+SyntaxError: invalid syntax
+(0.000) QUERY = u'SELECT (1) AS "a" FROM "authentication_account" WHERE "authentication_account"."email" = %s LIMIT 1' - PARAMS = (u'paula@n6a.com',); args=(u'paula@n6a.com',)
+(0.000) QUERY = u'SELECT (1) AS "a" FROM "authentication_account" WHERE "authentication_account"."username" = %s LIMIT 1' - PARAMS = (u'paula1',); args=(u'paula1',)
+(0.000) QUERY = u'BEGIN' - PARAMS = (); args=None
+(0.001) QUERY = u'INSERT INTO "authentication_account" ("password", "last_login", "email", "username", "first_name", "last_name", "tagline", "is_admin", "created_at", "updated_at") VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)' - PARAMS = (u'pbkdf2_sha256$12000$E63lbYbWRNlR$ISXX1y5Gg3IbdxrGTZs+cdtykyG1M2Z9US67F3omcRM=', u'2017-09-12 20:15:15.189475', u'paula@n6a.com', u'paula1', u'', u'', u'', False, u'2017-09-12 20:15:15.246585', u'2017-09-12 20:15:15.246609'); args=[u'pbkdf2_sha256$12000$E63lbYbWRNlR$ISXX1y5Gg3IbdxrGTZs+cdtykyG1M2Z9US67F3omcRM=', u'2017-09-12 20:15:15.189475', u'paula@n6a.com', u'paula1', u'', u'', u'', False, u'2017-09-12 20:15:15.246585', u'2017-09-12 20:15:15.246609']
+Internal Server Error: /api/v1/accounts/
+Traceback (most recent call last):
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/rest_framework/viewsets.py", line 79, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/rest_framework/views.py", line 406, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/rest_framework/views.py", line 403, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/graphael/thinkster-django-angular-boilerplate/authentication/views.py", line 28, in create
+    return Response(serializer.validated_data, status=status.HTTP_201_CREATED)
+NameError: global name 'Response' is not defined
+(0.000) QUERY = "\n            SELECT name FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+(0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+(0.000) QUERY = u'SELECT (1) AS "a" FROM "authentication_account" WHERE "authentication_account"."email" = %s LIMIT 1' - PARAMS = (u'lol@lol.com',); args=(u'lol@lol.com',)
+(0.000) QUERY = u'SELECT (1) AS "a" FROM "authentication_account" WHERE "authentication_account"."username" = %s LIMIT 1' - PARAMS = (u'emmit',); args=(u'emmit',)
+(0.000) QUERY = u'BEGIN' - PARAMS = (); args=None
+(0.001) QUERY = u'INSERT INTO "authentication_account" ("password", "last_login", "email", "username", "first_name", "last_name", "tagline", "is_admin", "created_at", "updated_at") VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)' - PARAMS = (u'pbkdf2_sha256$12000$dRsC3S4ZmEXa$hPV/uV9HrH9AjRZK46ViHbw4Yd2JSsi+uiJc6GF0atg=', u'2017-09-12 20:19:51.404874', u'lol@lol.com', u'emmit', u'', u'', u'', False, u'2017-09-12 20:19:51.466467', u'2017-09-12 20:19:51.466511'); args=[u'pbkdf2_sha256$12000$dRsC3S4ZmEXa$hPV/uV9HrH9AjRZK46ViHbw4Yd2JSsi+uiJc6GF0atg=', u'2017-09-12 20:19:51.404874', u'lol@lol.com', u'emmit', u'', u'', u'', False, u'2017-09-12 20:19:51.466467', u'2017-09-12 20:19:51.466511']
+Internal Server Error: /api/v1/accounts/
+Traceback (most recent call last):
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/rest_framework/viewsets.py", line 79, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/rest_framework/views.py", line 406, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/rest_framework/views.py", line 403, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/graphael/thinkster-django-angular-boilerplate/authentication/views.py", line 28, in create
+    return Response(serializer.validated_data, status=status.HTTP_201_CREATED)
+NameError: global name 'Response' is not defined
+(0.000) QUERY = "\n            SELECT name FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+(0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+(0.000) QUERY = u'SELECT (1) AS "a" FROM "authentication_account" WHERE "authentication_account"."email" = %s LIMIT 1' - PARAMS = (u'melo@n6a.com',); args=(u'melo@n6a.com',)
+(0.000) QUERY = u'SELECT (1) AS "a" FROM "authentication_account" WHERE "authentication_account"."username" = %s LIMIT 1' - PARAMS = (u'melo1',); args=(u'melo1',)
+(0.000) QUERY = u'BEGIN' - PARAMS = (); args=None
+(0.001) QUERY = u'INSERT INTO "authentication_account" ("password", "last_login", "email", "username", "first_name", "last_name", "tagline", "is_admin", "created_at", "updated_at") VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)' - PARAMS = (u'pbkdf2_sha256$12000$BBN5x8AKPLF2$Rpf4nhAIDQbt8FsTUtUxtX9iUdyrcxVVTyzdxvLhb48=', u'2017-09-12 20:23:52.629039', u'melo@n6a.com', u'melo1', u'', u'', u'', False, u'2017-09-12 20:23:52.685473', u'2017-09-12 20:23:52.685509'); args=[u'pbkdf2_sha256$12000$BBN5x8AKPLF2$Rpf4nhAIDQbt8FsTUtUxtX9iUdyrcxVVTyzdxvLhb48=', u'2017-09-12 20:23:52.629039', u'melo@n6a.com', u'melo1', u'', u'', u'', False, u'2017-09-12 20:23:52.685473', u'2017-09-12 20:23:52.685509']
+Internal Server Error: /api/v1/accounts/
+Traceback (most recent call last):
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/rest_framework/viewsets.py", line 79, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/rest_framework/views.py", line 406, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/rest_framework/views.py", line 403, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/graphael/thinkster-django-angular-boilerplate/authentication/views.py", line 34, in create
+    return Response(serializer.validated_data, status=status.HTTP_201_CREATED)
+NameError: global name 'Response' is not defined
+(0.000) QUERY = "\n            SELECT name FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+(0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()

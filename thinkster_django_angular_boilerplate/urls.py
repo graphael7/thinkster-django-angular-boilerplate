@@ -1,4 +1,4 @@
-from django.conf.urls import patterns, url
+from django.conf.urls import patterns, url, include
 
 from thinkster_django_angular_boilerplate.views import IndexView
 
@@ -11,8 +11,6 @@ router.register(r'accounts', AccountViewSet)
 
 urlpatterns = patterns(
     '',
-
-    url('^.*$', IndexView.as_view(), name='index'),
 
     url(r'^api/v1/', include(router.urls)),
 
