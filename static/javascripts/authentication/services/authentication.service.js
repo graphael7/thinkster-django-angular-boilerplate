@@ -11,6 +11,7 @@
 
     var Authentication = {
       login: login,
+      logout: logout,
       register:register,
       setAuthenticatedAccount: setAuthenticatedAccount,
       unauthenticate: unauthenticate
@@ -23,13 +24,46 @@
         username: username,
         password: password,
         email: email
-      });
+      }).then(registerSuccessFn, registerErrorFn);
+
+      function registerSuccessFn(data, status, headers, config) {
+        Authentication.login(email, password);
+      }
+
+      function registerErrorFn(data, status, headers, config) {
+        console.error('Epic failure!');
+      }
     }
 
     function login(email, password) {
       return $http.post('/api/v1/auth/login/', {
         email: email, password: password
       }).then(loginSuccessFn, loginErrorFn);
+
+      function loginSuccessFn(data, status, headers, config) {
+        Authentication.setAuthenticatedAccount(data.data);
+
+        window.location = '/';
+      }
+
+      function loginErrorFn(data, status, headers, config){
+        console.error('Epic failure!');
+      }
+    }
+
+    function logout() {
+      return $http.post('/api/v1/auth/logout/')
+      .then(logoutSuccessFn, logoutErrorFn);
+
+      function logoutSuccessFn(data, status, headers, config) {
+        Authentication.unauthenticate();
+
+        window.location = '/';
+      }
+
+      function logoutErrorFn(data, status, headers, config) {
+        console.error('Epic failure!');
+      }
     }
 
     function getAuthenticatedAccount(){
@@ -51,15 +85,9 @@
       delete $cookies.authenticatedAccount;
     }
 
-    function loginSuccessFn(data, status, headers, config) {
-      Authentication.setAuthenticatedAccount(data.data);
 
-      window.location = '/';
-    }
 
-    function loginErrorFn(data, status, headers, config){
-      console.error('Epic failure!');
-    }
+
 
   }
 })();
