@@ -10,6 +10,8 @@
   function Authentication($cookies, $http) {
 
     var Authentication = {
+      getAuthenticatedAccount: getAuthenticatedAccount,
+      isAuthenticated: isAuthenticated,
       login: login,
       logout: logout,
       register:register,
@@ -38,6 +40,7 @@
     function login(email, password) {
       return $http.post('/api/v1/auth/login/', {
         email: email, password: password
+
       }).then(loginSuccessFn, loginErrorFn);
 
       function loginSuccessFn(data, status, headers, config) {
@@ -47,6 +50,7 @@
       }
 
       function loginErrorFn(data, status, headers, config){
+
         console.error('Epic failure!');
       }
     }

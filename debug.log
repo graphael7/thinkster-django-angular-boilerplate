@@ -1,0 +1,46 @@
+(0.001) QUERY = "\n            SELECT name FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+(0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+(0.000) QUERY = "\n            SELECT name FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+(0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+(0.000) QUERY = "\n            SELECT name FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+(0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+(0.001) QUERY = u'SELECT "authentication_account"."id", "authentication_account"."password", "authentication_account"."last_login", "authentication_account"."email", "authentication_account"."username", "authentication_account"."first_name", "authentication_account"."last_name", "authentication_account"."tagline", "authentication_account"."is_admin", "authentication_account"."created_at", "authentication_account"."updated_at" FROM "authentication_account" WHERE "authentication_account"."email" = %s LIMIT 21' - PARAMS = (u'graphael@gmail.com',); args=(u'graphael@gmail.com',)
+Internal Server Error: /api/v1/auth/login/
+Traceback (most recent call last):
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/rest_framework/views.py", line 403, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/rest_framework/views.py", line 403, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/graphael/thinkster-django-angular-boilerplate/authentication/views.py", line 53, in post
+    if account is not None:
+  File "/Users/graphael/thinkster-django-angular-boilerplate/authentication/views.py", line 53, in post
+    if account is not None:
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/bdb.py", line 49, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/bdb.py", line 68, in dispatch_line
+    if self.quitting: raise BdbQuit
+BdbQuit
+(0.000) QUERY = "\n            SELECT name FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+(0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+(0.001) QUERY = u'SELECT "authentication_account"."id", "authentication_account"."password", "authentication_account"."last_login", "authentication_account"."email", "authentication_account"."username", "authentication_account"."first_name", "authentication_account"."last_name", "authentication_account"."tagline", "authentication_account"."is_admin", "authentication_account"."created_at", "authentication_account"."updated_at" FROM "authentication_account" WHERE "authentication_account"."email" = %s LIMIT 21' - PARAMS = (u'graphael@gmail.com',); args=(u'graphael@gmail.com',)
+(0.001) QUERY = u'SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = %s LIMIT 1' - PARAMS = (u'j6uw2t504e0ybht2mnry4t8oqdppl3nl',); args=(u'j6uw2t504e0ybht2mnry4t8oqdppl3nl',)
+(0.000) QUERY = u'BEGIN' - PARAMS = (); args=None
+(0.001) QUERY = u'INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT %s AS "session_key", %s AS "session_data", %s AS "expire_date"' - PARAMS = (u'j6uw2t504e0ybht2mnry4t8oqdppl3nl', u'MjhmOTAyNmI1ZDI1NmM3OTJmMDQyOTFkNWU0OWFjMGI4NzQ1MTUyMTp7fQ==', u'2017-09-28 13:32:20.637407'); args=(u'j6uw2t504e0ybht2mnry4t8oqdppl3nl', u'MjhmOTAyNmI1ZDI1NmM3OTJmMDQyOTFkNWU0OWFjMGI4NzQ1MTUyMTp7fQ==', u'2017-09-28 13:32:20.637407')
+(0.000) QUERY = u'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE "django_session"."session_key" = %s LIMIT 21' - PARAMS = (u'j6uw2t504e0ybht2mnry4t8oqdppl3nl',); args=(u'j6uw2t504e0ybht2mnry4t8oqdppl3nl',)
+(0.000) QUERY = u'BEGIN' - PARAMS = (); args=None
+(0.000) QUERY = u'DELETE FROM "django_session" WHERE "django_session"."session_key" IN (%s)' - PARAMS = (u'j6uw2t504e0ybht2mnry4t8oqdppl3nl',); args=(u'j6uw2t504e0ybht2mnry4t8oqdppl3nl',)
+(0.000) QUERY = u'BEGIN' - PARAMS = (); args=None
+(0.000) QUERY = u'UPDATE "authentication_account" SET "last_login" = %s WHERE "authentication_account"."id" = %s' - PARAMS = (u'2017-09-14 13:32:20.642074', 1); args=(u'2017-09-14 13:32:20.642074', 1)
+(0.000) QUERY = u'BEGIN' - PARAMS = (); args=None
+(0.000) QUERY = u'UPDATE "django_session" SET "session_data" = %s, "expire_date" = %s WHERE "django_session"."session_key" = %s' - PARAMS = (u'MDk5OTRmZmYzZDRhMmI3MDBlODc1ZjliNWE5MjUxNTJjYjMyYmNmMzp7Il9hdXRoX3VzZXJfaGFzaCI6IjZjOWZmNjY4ZDlmODU0NDk1MmVmM2U4ZmU3MDhlYWZlZjJhMDk2MzciLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOjF9', u'2017-09-28 13:32:20.645400', u'j6uw2t504e0ybht2mnry4t8oqdppl3nl'); args=(u'MDk5OTRmZmYzZDRhMmI3MDBlODc1ZjliNWE5MjUxNTJjYjMyYmNmMzp7Il9hdXRoX3VzZXJfaGFzaCI6IjZjOWZmNjY4ZDlmODU0NDk1MmVmM2U4ZmU3MDhlYWZlZjJhMDk2MzciLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOjF9', u'2017-09-28 13:32:20.645400', u'j6uw2t504e0ybht2mnry4t8oqdppl3nl')
+(0.000) QUERY = u'INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT %s AS "session_key", %s AS "session_data", %s AS "expire_date"' - PARAMS = (u'j6uw2t504e0ybht2mnry4t8oqdppl3nl', u'MDk5OTRmZmYzZDRhMmI3MDBlODc1ZjliNWE5MjUxNTJjYjMyYmNmMzp7Il9hdXRoX3VzZXJfaGFzaCI6IjZjOWZmNjY4ZDlmODU0NDk1MmVmM2U4ZmU3MDhlYWZlZjJhMDk2MzciLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOjF9', u'2017-09-28 13:32:20.645400'); args=(u'j6uw2t504e0ybht2mnry4t8oqdppl3nl', u'MDk5OTRmZmYzZDRhMmI3MDBlODc1ZjliNWE5MjUxNTJjYjMyYmNmMzp7Il9hdXRoX3VzZXJfaGFzaCI6IjZjOWZmNjY4ZDlmODU0NDk1MmVmM2U4ZmU3MDhlYWZlZjJhMDk2MzciLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOjF9', u'2017-09-28 13:32:20.645400')
+(0.000) QUERY = u'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = %s AND "django_session"."expire_date" > %s) LIMIT 21' - PARAMS = (u'j6uw2t504e0ybht2mnry4t8oqdppl3nl', u'2017-09-14 13:32:20.657628'); args=('j6uw2t504e0ybht2mnry4t8oqdppl3nl', u'2017-09-14 13:32:20.657628')
+(0.000) QUERY = u'SELECT "authentication_account"."id", "authentication_account"."password", "authentication_account"."last_login", "authentication_account"."email", "authentication_account"."username", "authentication_account"."first_name", "authentication_account"."last_name", "authentication_account"."tagline", "authentication_account"."is_admin", "authentication_account"."created_at", "authentication_account"."updated_at" FROM "authentication_account" WHERE "authentication_account"."id" = %s LIMIT 21' - PARAMS = (1,); args=(1,)
+(0.000) QUERY = u'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = %s AND "django_session"."expire_date" > %s) LIMIT 21' - PARAMS = (u'j6uw2t504e0ybht2mnry4t8oqdppl3nl', u'2017-09-14 13:32:20.722831'); args=('j6uw2t504e0ybht2mnry4t8oqdppl3nl', u'2017-09-14 13:32:20.722831')
+(0.000) QUERY = u'SELECT "authentication_account"."id", "authentication_account"."password", "authentication_account"."last_login", "authentication_account"."email", "authentication_account"."username", "authentication_account"."first_name", "authentication_account"."last_name", "authentication_account"."tagline", "authentication_account"."is_admin", "authentication_account"."created_at", "authentication_account"."updated_at" FROM "authentication_account" WHERE "authentication_account"."id" = %s LIMIT 21' - PARAMS = (1,); args=(1,)

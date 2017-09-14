@@ -8,7 +8,6 @@ import json
 from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout
 
-
 from rest_framework import status, views
 from rest_framework import permissions
 from rest_framework.response import Response
@@ -49,7 +48,6 @@ class LoginView(views.APIView):
         password = data.get('password', None)
 
         account = authenticate(email=email, password=password)
-
         if account is not None:
             if account.is_active:
                 login(request, account)
