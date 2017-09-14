@@ -116,3 +116,278 @@ BdbQuit
 (0.000) QUERY = u'UPDATE "django_session" SET "session_data" = %s, "expire_date" = %s WHERE "django_session"."session_key" = %s' - PARAMS = (u'MjhmOTAyNmI1ZDI1NmM3OTJmMDQyOTFkNWU0OWFjMGI4NzQ1MTUyMTp7fQ==', u'2017-09-28 17:21:20.758679', u'b4v6jhl4sod93tz3dkmkqb5mb1usdpgh'); args=(u'MjhmOTAyNmI1ZDI1NmM3OTJmMDQyOTFkNWU0OWFjMGI4NzQ1MTUyMTp7fQ==', u'2017-09-28 17:21:20.758679', u'b4v6jhl4sod93tz3dkmkqb5mb1usdpgh')
 (0.001) QUERY = u'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = %s AND "django_session"."expire_date" > %s) LIMIT 21' - PARAMS = (u'b4v6jhl4sod93tz3dkmkqb5mb1usdpgh', u'2017-09-14 17:21:20.771210'); args=('b4v6jhl4sod93tz3dkmkqb5mb1usdpgh', u'2017-09-14 17:21:20.771210')
 (0.000) QUERY = u'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = %s AND "django_session"."expire_date" > %s) LIMIT 21' - PARAMS = (u'b4v6jhl4sod93tz3dkmkqb5mb1usdpgh', u'2017-09-14 17:21:20.834507'); args=('b4v6jhl4sod93tz3dkmkqb5mb1usdpgh', u'2017-09-14 17:21:20.834507')
+(0.000) QUERY = "\n            SELECT name FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+(0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+(0.000) QUERY = "\n            SELECT name FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+(0.000) QUERY = u'BEGIN' - PARAMS = (); args=None
+(0.000) QUERY = u'BEGIN' - PARAMS = (); args=None
+(0.000) QUERY = u'BEGIN' - PARAMS = (); args=None
+(0.000) QUERY = "\n            SELECT name FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+(0.000) QUERY = u'BEGIN' - PARAMS = (); args=None
+CREATE TABLE "posts_post" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "content" text NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "author_id" integer NOT NULL REFERENCES "authentication_account" ("id")); (params [])
+(0.000) QUERY = u'CREATE TABLE "posts_post" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "content" text NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "author_id" integer NOT NULL REFERENCES "authentication_account" ("id"))' - PARAMS = (); args=[]
+CREATE INDEX posts_post_4f331e2f ON "posts_post" ("author_id"); (params [])
+(0.000) QUERY = u'CREATE INDEX posts_post_4f331e2f ON "posts_post" ("author_id")' - PARAMS = (); args=[]
+(0.000) QUERY = "\n            SELECT name FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+(0.000) QUERY = u'BEGIN' - PARAMS = (); args=None
+(0.000) QUERY = u'INSERT INTO "django_migrations" ("app", "name", "applied") VALUES (%s, %s, %s)' - PARAMS = (u'posts', u'0001_initial', u'2017-09-14 17:49:05.321434'); args=['posts', u'0001_initial', u'2017-09-14 17:49:05.321434']
+(0.000) QUERY = u'SELECT "django_content_type"."id", "django_content_type"."name", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = %s AND "django_content_type"."app_label" = %s) LIMIT 21' - PARAMS = (u'logentry', u'admin'); args=('logentry', 'admin')
+(0.000) QUERY = u'SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ( "auth_permission"."content_type_id" = "django_content_type"."id" ) WHERE "auth_permission"."content_type_id" IN (%s) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC' - PARAMS = (1,); args=(1,)
+(0.000) QUERY = u'SELECT "django_content_type"."id", "django_content_type"."name", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = %s ORDER BY "django_content_type"."name" ASC' - PARAMS = (u'admin',); args=('admin',)
+(0.000) QUERY = u'SELECT "django_content_type"."id", "django_content_type"."name", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = %s AND "django_content_type"."app_label" = %s) LIMIT 21' - PARAMS = (u'permission', u'auth'); args=('permission', 'auth')
+(0.000) QUERY = u'SELECT "django_content_type"."id", "django_content_type"."name", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = %s AND "django_content_type"."app_label" = %s) LIMIT 21' - PARAMS = (u'group', u'auth'); args=('group', 'auth')
+(0.000) QUERY = u'SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ( "auth_permission"."content_type_id" = "django_content_type"."id" ) WHERE "auth_permission"."content_type_id" IN (%s, %s) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC' - PARAMS = (2, 3); args=(2, 3)
+(0.000) QUERY = u'SELECT "django_content_type"."id", "django_content_type"."name", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = %s ORDER BY "django_content_type"."name" ASC' - PARAMS = (u'auth',); args=('auth',)
+(0.000) QUERY = u'SELECT "django_content_type"."id", "django_content_type"."name", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = %s AND "django_content_type"."app_label" = %s) LIMIT 21' - PARAMS = (u'contenttype', u'contenttypes'); args=('contenttype', 'contenttypes')
+(0.000) QUERY = u'SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ( "auth_permission"."content_type_id" = "django_content_type"."id" ) WHERE "auth_permission"."content_type_id" IN (%s) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC' - PARAMS = (5,); args=(5,)
+(0.000) QUERY = u'SELECT "django_content_type"."id", "django_content_type"."name", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = %s ORDER BY "django_content_type"."name" ASC' - PARAMS = (u'contenttypes',); args=('contenttypes',)
+(0.000) QUERY = u'SELECT "django_content_type"."id", "django_content_type"."name", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = %s AND "django_content_type"."app_label" = %s) LIMIT 21' - PARAMS = (u'session', u'sessions'); args=('session', 'sessions')
+(0.000) QUERY = u'SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ( "auth_permission"."content_type_id" = "django_content_type"."id" ) WHERE "auth_permission"."content_type_id" IN (%s) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC' - PARAMS = (6,); args=(6,)
+(0.000) QUERY = u'SELECT "django_content_type"."id", "django_content_type"."name", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = %s ORDER BY "django_content_type"."name" ASC' - PARAMS = (u'sessions',); args=('sessions',)
+(0.000) QUERY = u'SELECT "django_content_type"."id", "django_content_type"."name", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = %s AND "django_content_type"."app_label" = %s) LIMIT 21' - PARAMS = (u'account', u'authentication'); args=('account', 'authentication')
+(0.000) QUERY = u'SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ( "auth_permission"."content_type_id" = "django_content_type"."id" ) WHERE "auth_permission"."content_type_id" IN (%s) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC' - PARAMS = (7,); args=(7,)
+(0.000) QUERY = u'SELECT "django_content_type"."id", "django_content_type"."name", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = %s ORDER BY "django_content_type"."name" ASC' - PARAMS = (u'authentication',); args=('authentication',)
+(0.000) QUERY = u'SELECT "django_content_type"."id", "django_content_type"."name", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = %s AND "django_content_type"."app_label" = %s) LIMIT 21' - PARAMS = (u'post', u'posts'); args=('post', 'posts')
+(0.000) QUERY = u'BEGIN' - PARAMS = (); args=None
+(0.000) QUERY = u'INSERT INTO "django_content_type" ("name", "app_label", "model") VALUES (%s, %s, %s)' - PARAMS = (u'post', u'posts', u'post'); args=[u'post', 'posts', 'post']
+(0.000) QUERY = u'SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ( "auth_permission"."content_type_id" = "django_content_type"."id" ) WHERE "auth_permission"."content_type_id" IN (%s) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC' - PARAMS = (8,); args=(8,)
+(0.000) QUERY = u'BEGIN' - PARAMS = (); args=None
+(0.000) QUERY = u'INSERT INTO "auth_permission" ("name", "content_type_id", "codename") SELECT %s AS "name", %s AS "content_type_id", %s AS "codename" UNION ALL SELECT %s, %s, %s UNION ALL SELECT %s, %s, %s' - PARAMS = (u'Can add post', 8, u'add_post', u'Can change post', 8, u'change_post', u'Can delete post', 8, u'delete_post'); args=(u'Can add post', 8, u'add_post', u'Can change post', 8, u'change_post', u'Can delete post', 8, u'delete_post')
+(0.000) QUERY = u'SELECT "django_content_type"."id", "django_content_type"."name", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = %s ORDER BY "django_content_type"."name" ASC' - PARAMS = (u'posts',); args=('posts',)
+(0.000) QUERY = "\n            SELECT name FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+(0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+(0.000) QUERY = u'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = %s AND "django_session"."expire_date" > %s) LIMIT 21' - PARAMS = (u'b4v6jhl4sod93tz3dkmkqb5mb1usdpgh', u'2017-09-14 18:36:42.005775'); args=('b4v6jhl4sod93tz3dkmkqb5mb1usdpgh', u'2017-09-14 18:36:42.005775')
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/handlers/base.py", line 98, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/graphael/thinkster-django-angular-boilerplate/thinkster_django_angular_boilerplate/urls.py", line 13, in <module>
+    from posts.views import AccountPostsViewSet, PostViewSet
+  File "/Users/graphael/thinkster-django-angular-boilerplate/posts/views.py", line 6, in <module>
+    from posts.serializers import PostSerializer
+ImportError: No module named serializers
+Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/handlers/base.py", line 87, in get_response
+    response = middleware_method(request)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/middleware/common.py", line 72, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 619, in is_valid_path
+    resolve(path, urlconf)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 494, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/graphael/thinkster-django-angular-boilerplate/thinkster_django_angular_boilerplate/urls.py", line 13, in <module>
+    from posts.views import AccountPostsViewSet, PostViewSet
+  File "/Users/graphael/thinkster-django-angular-boilerplate/posts/views.py", line 6, in <module>
+    from posts.serializers import PostSerializer
+ImportError: No module named serializers
+(0.001) QUERY = u'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = %s AND "django_session"."expire_date" > %s) LIMIT 21' - PARAMS = (u'b4v6jhl4sod93tz3dkmkqb5mb1usdpgh', u'2017-09-14 18:38:14.244512'); args=('b4v6jhl4sod93tz3dkmkqb5mb1usdpgh', u'2017-09-14 18:38:14.244512')
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/handlers/base.py", line 98, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/graphael/thinkster-django-angular-boilerplate/thinkster_django_angular_boilerplate/urls.py", line 13, in <module>
+    from posts.views import AccountPostsViewSet, PostViewSet
+  File "/Users/graphael/thinkster-django-angular-boilerplate/posts/views.py", line 6, in <module>
+    from posts.serializers import PostSerializer
+  File "/Users/graphael/thinkster-django-angular-boilerplate/posts/serializers.py", line 7
+    author AccountSerializer(read_only=True, required=False)
+                           ^
+SyntaxError: invalid syntax
+Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/handlers/base.py", line 87, in get_response
+    response = middleware_method(request)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/middleware/common.py", line 72, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 619, in is_valid_path
+    resolve(path, urlconf)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 494, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/graphael/thinkster-django-angular-boilerplate/thinkster_django_angular_boilerplate/urls.py", line 13, in <module>
+    from posts.views import AccountPostsViewSet, PostViewSet
+  File "/Users/graphael/thinkster-django-angular-boilerplate/posts/views.py", line 6, in <module>
+    from posts.serializers import PostSerializer
+  File "/Users/graphael/thinkster-django-angular-boilerplate/posts/serializers.py", line 7
+    author AccountSerializer(read_only=True, required=False)
+                           ^
+SyntaxError: invalid syntax
+(0.000) QUERY = u'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = %s AND "django_session"."expire_date" > %s) LIMIT 21' - PARAMS = (u'b4v6jhl4sod93tz3dkmkqb5mb1usdpgh', u'2017-09-14 18:38:29.612817'); args=('b4v6jhl4sod93tz3dkmkqb5mb1usdpgh', u'2017-09-14 18:38:29.612817')
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/handlers/base.py", line 98, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/graphael/thinkster-django-angular-boilerplate/thinkster_django_angular_boilerplate/urls.py", line 13, in <module>
+    from posts.views import AccountPostsViewSet, PostViewSet
+  File "/Users/graphael/thinkster-django-angular-boilerplate/posts/views.py", line 6, in <module>
+    from posts.serializers import PostSerializer
+  File "/Users/graphael/thinkster-django-angular-boilerplate/posts/serializers.py", line 7
+    author AccountSerializer(read_only=True, required=False)
+                           ^
+SyntaxError: invalid syntax
+Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/handlers/base.py", line 87, in get_response
+    response = middleware_method(request)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/middleware/common.py", line 72, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 619, in is_valid_path
+    resolve(path, urlconf)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 494, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/graphael/thinkster-django-angular-boilerplate/thinkster_django_angular_boilerplate/urls.py", line 13, in <module>
+    from posts.views import AccountPostsViewSet, PostViewSet
+  File "/Users/graphael/thinkster-django-angular-boilerplate/posts/views.py", line 6, in <module>
+    from posts.serializers import PostSerializer
+  File "/Users/graphael/thinkster-django-angular-boilerplate/posts/serializers.py", line 7
+    author AccountSerializer(read_only=True, required=False)
+                           ^
+SyntaxError: invalid syntax
+(0.000) QUERY = u'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = %s AND "django_session"."expire_date" > %s) LIMIT 21' - PARAMS = (u'b4v6jhl4sod93tz3dkmkqb5mb1usdpgh', u'2017-09-14 18:39:21.183688'); args=('b4v6jhl4sod93tz3dkmkqb5mb1usdpgh', u'2017-09-14 18:39:21.183688')
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/handlers/base.py", line 98, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/graphael/thinkster-django-angular-boilerplate/thinkster_django_angular_boilerplate/urls.py", line 13, in <module>
+    from posts.views import AccountPostsViewSet, PostViewSet
+  File "/Users/graphael/thinkster-django-angular-boilerplate/posts/views.py", line 6, in <module>
+    from posts.serializers import PostSerializer
+  File "/Users/graphael/thinkster-django-angular-boilerplate/posts/serializers.py", line 4, in <module>
+    from posts.model import Post
+ImportError: No module named model
+Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/handlers/base.py", line 87, in get_response
+    response = middleware_method(request)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/middleware/common.py", line 72, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 619, in is_valid_path
+    resolve(path, urlconf)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 494, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/graphael/thinkster-django-angular-boilerplate/thinkster_django_angular_boilerplate/urls.py", line 13, in <module>
+    from posts.views import AccountPostsViewSet, PostViewSet
+  File "/Users/graphael/thinkster-django-angular-boilerplate/posts/views.py", line 6, in <module>
+    from posts.serializers import PostSerializer
+  File "/Users/graphael/thinkster-django-angular-boilerplate/posts/serializers.py", line 4, in <module>
+    from posts.model import Post
+ImportError: No module named model
+(0.000) QUERY = u'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = %s AND "django_session"."expire_date" > %s) LIMIT 21' - PARAMS = (u'b4v6jhl4sod93tz3dkmkqb5mb1usdpgh', u'2017-09-14 18:40:11.991518'); args=('b4v6jhl4sod93tz3dkmkqb5mb1usdpgh', u'2017-09-14 18:40:11.991518')
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/handlers/base.py", line 98, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/graphael/thinkster-django-angular-boilerplate/thinkster_django_angular_boilerplate/urls.py", line 13, in <module>
+    from posts.views import AccountPostsViewSet, PostViewSet
+  File "/Users/graphael/thinkster-django-angular-boilerplate/posts/views.py", line 6, in <module>
+    from posts.serializers import PostSerializer
+  File "/Users/graphael/thinkster-django-angular-boilerplate/posts/serializers.py", line 6, in <module>
+    class PostSerializer(serializers.ModelSerializer):
+  File "/Users/graphael/thinkster-django-angular-boilerplate/posts/serializers.py", line 7, in PostSerializer
+    author = AccountSerializer(read_only=True, required=False)
+NameError: name 'AccountSerializer' is not defined
+Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/handlers/base.py", line 87, in get_response
+    response = middleware_method(request)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/middleware/common.py", line 72, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 619, in is_valid_path
+    resolve(path, urlconf)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 494, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/graphael/.virtualenvs/thinkster-djangular/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/graphael/thinkster-django-angular-boilerplate/thinkster_django_angular_boilerplate/urls.py", line 13, in <module>
+    from posts.views import AccountPostsViewSet, PostViewSet
+  File "/Users/graphael/thinkster-django-angular-boilerplate/posts/views.py", line 6, in <module>
+    from posts.serializers import PostSerializer
+  File "/Users/graphael/thinkster-django-angular-boilerplate/posts/serializers.py", line 6, in <module>
+    class PostSerializer(serializers.ModelSerializer):
+  File "/Users/graphael/thinkster-django-angular-boilerplate/posts/serializers.py", line 7, in PostSerializer
+    author = AccountSerializer(read_only=True, required=False)
+NameError: name 'AccountSerializer' is not defined
+(0.001) QUERY = u'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = %s AND "django_session"."expire_date" > %s) LIMIT 21' - PARAMS = (u'b4v6jhl4sod93tz3dkmkqb5mb1usdpgh', u'2017-09-14 18:45:31.215349'); args=('b4v6jhl4sod93tz3dkmkqb5mb1usdpgh', u'2017-09-14 18:45:31.215349')
+(0.000) QUERY = u'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = %s AND "django_session"."expire_date" > %s) LIMIT 21' - PARAMS = (u'b4v6jhl4sod93tz3dkmkqb5mb1usdpgh', u'2017-09-14 18:45:31.346504'); args=('b4v6jhl4sod93tz3dkmkqb5mb1usdpgh', u'2017-09-14 18:45:31.346504')
+(0.001) QUERY = u'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = %s AND "django_session"."expire_date" > %s) LIMIT 21' - PARAMS = (u'b4v6jhl4sod93tz3dkmkqb5mb1usdpgh', u'2017-09-14 18:45:35.091494'); args=('b4v6jhl4sod93tz3dkmkqb5mb1usdpgh', u'2017-09-14 18:45:35.091494')
+(0.001) QUERY = u'SELECT "authentication_account"."id", "authentication_account"."password", "authentication_account"."last_login", "authentication_account"."email", "authentication_account"."username", "authentication_account"."first_name", "authentication_account"."last_name", "authentication_account"."tagline", "authentication_account"."is_admin", "authentication_account"."created_at", "authentication_account"."updated_at" FROM "authentication_account" ORDER BY "authentication_account"."created_at" DESC LIMIT 1' - PARAMS = (); args=()
+(0.000) QUERY = u'BEGIN' - PARAMS = (); args=None
+(0.001) QUERY = u'INSERT INTO "posts_post" ("author_id", "content", "created_at", "updated_at") VALUES (%s, %s, %s, %s)' - PARAMS = (9, u'I promise this is not Google Plus!', u'2017-09-14 18:48:54.901046', u'2017-09-14 18:48:54.901344'); args=[9, 'I promise this is not Google Plus!', u'2017-09-14 18:48:54.901046', u'2017-09-14 18:48:54.901344']
