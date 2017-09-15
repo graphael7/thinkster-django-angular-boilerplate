@@ -9,13 +9,13 @@
     var directive = {
       controller: 'PostsController',
       controllerAs: 'vm',
-      restricts: 'E',
+      restrict: 'E',
       scope: {
         posts: '='
       },
       templateUrl: '/static/templates/posts/posts.html'
     };
 
-    return directive
+    return directive;
   }
 })();

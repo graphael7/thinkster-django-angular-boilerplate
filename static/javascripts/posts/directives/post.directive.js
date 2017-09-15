@@ -7,13 +7,13 @@
 
   function post() {
     var directive = {
-      restricts: 'E',
+      restrict: 'E',
       scope: {
         post: '='
       },
       templateUrl: '/static/templates/posts/post.html'
     };
 
-    return directive
+    return directive;
   }
 })();
