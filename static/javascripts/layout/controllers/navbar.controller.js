@@ -16,4 +16,4 @@
       Authentication.logout();
     }
   }
-}) ();
+})();
