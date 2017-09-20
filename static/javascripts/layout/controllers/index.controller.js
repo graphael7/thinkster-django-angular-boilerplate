@@ -12,7 +12,8 @@
 
     vm.isAuthenticated = Authentication.isAuthenticated();
     vm.posts = [];
-
+    debugger;
+    console.log('************')
     activate();
 
     function activate() {

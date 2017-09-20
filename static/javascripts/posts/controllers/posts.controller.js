@@ -12,7 +12,6 @@
     var vm = this;
 
     vm.columns = [];
-
     activate();
 
     function activate() {
@@ -63,6 +62,7 @@
           var column = approximateShortestColumn();
 
           vm.columns[column].push(current[i]);
+
         }
       }
     }
