@@ -15,7 +15,7 @@
     activate();
 
     function activate() {
-      $scope.$watchCollection(function () { return $scope.post; }, render);
+      $scope.$watchCollection(function () { return $scope.posts; }, render);
       $scope.$watch(function () { return $(window).width(); }, render);
     }
 

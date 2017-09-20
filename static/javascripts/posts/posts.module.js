@@ -16,5 +16,4 @@
 
   angular
     .module('thinkster.posts.services', []);
-
 })();

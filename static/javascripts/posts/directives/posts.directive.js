@@ -1,3 +1,7 @@
+/**
+* Posts
+* @namespace thinkster.posts.directives
+*/
 (function () {
   'use strict';
 
@@ -5,7 +9,15 @@
     .module('thinkster.posts.directives')
     .directive('posts', posts);
 
+  /**
+  * @namespace Posts
+  */
   function posts() {
+    /**
+    * @name directive
+    * @desc The directive to be returned
+    * @memberOf thinkster.posts.directives.Posts
+    */
     var directive = {
       controller: 'PostsController',
       controllerAs: 'vm',

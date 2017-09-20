@@ -1,6 +1,6 @@
 from rest_framework import serializers
-
-from authentication.serializers import AccountSerializer
+import pdb
+from authentication.serializers import AccountSerializer, Account
 from posts.models import Post
 
 class PostSerializer(serializers.ModelSerializer):

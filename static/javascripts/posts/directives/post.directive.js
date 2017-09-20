@@ -1,3 +1,7 @@
+/**
+* Post
+* @namespace thinkster.posts.directives
+*/
 (function () {
   'use strict';
 
@@ -5,7 +9,15 @@
     .module('thinkster.posts.directives')
     .directive('post', post);
 
+  /**
+  * @namespace Post
+  */
   function post() {
+    /**
+    * @name directive
+    * @desc The directive to be returned
+    * @memberOf thinkster.posts.directives.Post
+    */
     var directive = {
       restrict: 'E',
       scope: {

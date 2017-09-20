@@ -8,5 +8,4 @@
 
   angular
     .module('thinkster.utils.services', []);
-
-}) ();
+})();
