@@ -48,10 +48,6 @@
       }
 
 
-      /**
-      * @name postsErrorFn
-      * @desc Show snackbar with error
-      */
       function postsErrorFn(data, status, headers, config) {
         Snackbar.error(data.error);
       }

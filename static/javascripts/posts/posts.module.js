@@ -5,7 +5,7 @@
     .module('thinkster.posts', [
       'thinkster.posts.controllers',
       'thinkster.posts.directives',
-      'thinkster.posts.services'
+      'thinkster.posts.services',
     ]);
 
   angular
